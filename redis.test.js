@@ -3,7 +3,6 @@ const Redis = require('./redis')
 
 test('test set, get, unset', () => {
     const redis = new Redis()
-
     expect(redis.set('ex', 10)).toBe(null)
     expect(redis.get('ex')).toBe(10)
     expect(redis.unset('ex')).toBe(null)
